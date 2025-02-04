@@ -1,0 +1,179 @@
+/* Base styles for larger screens */
+body {
+  background-image: url("flowers.jpg");
+  background-size: cover; /* Make sure the image covers the screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keep the background fixed while scrolling (optional) */
+  margin: 0; /* Remove default margin */
+  height: 100vh; /* Ensure body takes up the full viewport height */
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 600px;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  background-color: violet;
+  border-radius: 100px;
+  top: 140px;
+}
+
+.header {
+  font-family: "Caveat", serif;
+  font-weight: bold;
+  font-size: 5rem;
+  margin: 0;
+  color: white;
+}
+
+#name1,
+#name2 {
+  width: 50%;
+  height: 30px;
+  border-radius: 20px;
+  border-width: 0;
+  font-size: 1.2rem;
+}
+
+.container div {
+  width: 80%;
+  text-align: center;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  border-radius: 30px;
+  border-width: 0;
+  background-color: skyblue;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: aqua;
+}
+
+.result {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 300px;
+  background-color: skyblue;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 20;
+}
+
+.result h1 {
+  color: purple;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgb(0, 0, 0, 0.5);
+  display: none;
+}
+
+/* Heart styling */
+.heart {
+  position: fixed;
+  top: 50%; /* Center the heart vertically */
+  left: 50%; /* Center the heart horizontally */
+  transform: translate(-50%, -50%); /* Center the heart exactly */
+  z-index: 15;
+  font-size: 30rem; /* Adjust the font size */
+  display: none;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .container {
+    width: 80%; /* Use more width on mobile */
+    height: 500px; /* Reduce container height */
+    top: 100px; /* Reduce the top margin */
+  }
+
+  .header {
+    font-size: 3rem; /* Smaller font size for header */
+  }
+
+  #name1,
+  #name2 {
+    width: 80%; /* Increase width of input fields */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .button {
+    width: 120px; /* Make button slightly bigger */
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .result {
+    width: 300px; /* Adjust width for smaller screen */
+    height: 250px;
+  }
+
+  .heart {
+    font-size: 20rem; /* Reduce heart size */
+  }
+}
+
+/* Further adjustments for very small screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .header {
+    font-size: 2.5rem; /* Smaller header font for very small screens */
+  }
+
+  #name1,
+  #name2 {
+    width: 90%; /* Use more space for input fields */
+  }
+
+  .button {
+    width: 100px;
+    font-size: 1rem; /* Adjust button size */
+  }
+
+  .result {
+    width: 250px;
+    height: 200px;
+  }
+
+  .heart {
+    font-size: 15rem; /* Further reduce heart size */
+  }
+}
