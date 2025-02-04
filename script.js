@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 const view = document.querySelector(".button");
 const name1 = document.querySelector("#name1");
